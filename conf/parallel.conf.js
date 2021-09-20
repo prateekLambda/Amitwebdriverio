@@ -897,7 +897,7 @@ console.log('https://automation.lambdatest.com/public/video?testID='+ session+'&
   connectionRetryTimeout: 90000,
   connectionRetryCount: 3,
   path: "/wd/hub",
-  hostname: "eu-central-1-hub.lambdatest.com",
+  hostname: "hub.lambdatest.com",
   port: 443,
   strictSSL: false,
   protocol: 'https',
