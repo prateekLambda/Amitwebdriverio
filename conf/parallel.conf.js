@@ -1,92 +1,885 @@
+
 exports.config = {
-  services: [
-    [
-      "lambdatest",
-      {
-        tunnel: true,
-        lambdatestOpts: {
-          logFile: "tunnel.log"
-        }
-      }
-    ]
-  ],
-  user: 'amitkslambdatest',
-  key: 'YP67KD00E5dag50FKkodeVLGXQSUwGlM8AW6SKbc5o4UElpLmv',
+
+  // services: [
+  //   [
+  //     "lambdatest",
+  //     {
+  //       tunnel: false,
+
+  //       lambdatestOpts: {
+  //         logFile: "tunnel.log",
+  //         tunnelName: "Prateek"
+  //       }
+  //     }
+  //   ]
+  // ],
+  user: process.env.LT_USERNAME,
+  key: process.env.LT_ACCESS_KEY,
   specs: [
     './tests/specs/single_test.js'
   ],
   exclude: [],
 
-  maxInstances: 10,
+  maxInstances: 60,
   commonCapabilities: {
-    // name: 'Parallel Sample Test',
-    // build: 'WebDriver Selenium Sample'
+    "LT:Options": {
+      "name": "Test",
+      "build": "BuildMultiple",
+
+    },
+    // "goog:chromeOptions": {
+    //   // Install upon starting browser in order to launch it
+    //   extensions: [
+    //     // Entry should be a base64-encoded packed Chrome app (.crx)
+    //     require('fs').readFileSync('E:\\extensions\\3.2.1_0.crx').toString('base64')
+    //   ]
+    // },
+
   },
 
   capabilities: [
     {
-      platfrom: "win10",
+      platformName: "Windows 10",
       browserName: "chrome",
-      version: "64.0"
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
+    },  {
+      platformName: "Windows 10",
+      browserName: "chrome",
+
     },
     {
-    platform: "Android",
-    platformVersion: "8",
-    deviceName: "Galaxy S7",
-    resolution: "1920x1080",
-    appium_version: "1.17.0",
-    timezone: "UTC-07:00",
-    browserName:"Chrome",
-    name: "Test webdriverio",
-    },
+      platformName: "Windows 10",
+      browserName: "chrome",
 
-
-    {
-      platform: "win10",
-      browserName: "firefox",
-      version: "64.0"
     },
     {
-      platform: "Android",
-      platformVersion: "8",
-      deviceName: "Galaxy S7",
-      resolution: "1920x1080",
-      appium_version: "1.17.0",
-      timezone: "UTC-07:00",
-      browserName:"Chrome",
-      name: "Test webdriverio",
-      },
+      platformName: "Windows 10",
+      browserName: "chrome",
 
-      {
-        platform: "Android",
-        platformVersion: "8",
-        deviceName: "Galaxy S7",
-        resolution: "1920x1080",
-        appium_version: "1.17.0",
-        timezone: "UTC-07:00",
-        browserName:"Chrome",
-        name: "Test webdriverio",
-        },
-
-        {
-          platform: "Android",
-          platformVersion: "8",
-          deviceName: "Galaxy S7",
-          resolution: "1920x1080",
-          appium_version: "1.17.0",
-          timezone: "UTC-07:00",
-          browserName:"Chrome",
-          name: "Test webdriverio",
-          },
-
+    },
 
     {
-      platform: "win10",
-      browserName: "internet explorer",
-      version: "11.0"
+      platformName: "Windows 10",
+      browserName: "chrome",
+
     }
-
-
   ],
 
   logLevel: "info",
@@ -94,19 +887,24 @@ exports.config = {
   screenshotPath: "./errorShots/",
   baseUrl: "",
   waitforTimeout: 10000,
-  connectionRetryTimeout: 90000,
+  connectionRetryTimeout: 9999999,
   connectionRetryCount: 3,
   path: "/wd/hub",
   hostname: "hub.lambdatest.com",
   port: 80,
   framework: "mocha",
   mochaOpts: {
-    ui: "bdd"
-  }
+    ui: "bdd",
+    timeout: 9999999  }
+
 };
 
 // Code to support common capabilities
-exports.config.capabilities.forEach(function(caps) {
-  for (var i in exports.config.commonCapabilities)
-    caps[i] = caps[i] || exports.config.commonCapabilities[i];
-});
+for (var j = 0; j > 200; j++) {
+  exports.config.capabilities.forEach(function (caps) {
+
+    for (var i in exports.config.commonCapabilities)
+      caps[i] = caps[i] || exports.config.commonCapabilities[i];
+
+  });
+};
