@@ -5,7 +5,7 @@ exports.config = {
   //   [
   //     "lambdatest",
   //     {
-  //       tunnel: false,
+  //       tunnel: true,
 
   //       lambdatestOpts: {
   //         logFile: "tunnel.log",
@@ -890,7 +890,7 @@ exports.config = {
   connectionRetryTimeout: 90000,
   connectionRetryCount: 3,
   path: "/wd/hub",
-  hostname: "hub.lambdatest.com",
+  hostname: "eu-central-1-hub.lambdatest.com",
   port: 443,
   strictSSL: false,
   protocol: 'https',
