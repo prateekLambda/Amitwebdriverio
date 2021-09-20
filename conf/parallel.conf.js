@@ -1,6 +1,6 @@
 
 exports.config = {
-  beforeScenario(){
+  beforeCommand(){
     var session = browser.sessionId
 var crypto = require('crypto');
 crypto.createHash('md5').update("prateeks:bc6ytMB3dajkj3cChXJcXl8qhTERlBD1Nc4ACCIa8g5MlOtZfm").digest("hex");
