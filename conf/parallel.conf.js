@@ -887,15 +887,17 @@ exports.config = {
   screenshotPath: "./errorShots/",
   baseUrl: "",
   waitforTimeout: 10000,
-  connectionRetryTimeout: 9999999,
+  connectionRetryTimeout: 90000,
   connectionRetryCount: 3,
   path: "/wd/hub",
   hostname: "hub.lambdatest.com",
-  port: 80,
+  port: 443,
+  strictSSL: false,
+  protocol: 'https',
   framework: "mocha",
   mochaOpts: {
     ui: "bdd",
-    timeout: 9999999  }
+    timeout: 90000  }
 
 };
 
