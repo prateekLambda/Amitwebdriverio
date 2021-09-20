@@ -1,19 +1,26 @@
 
 exports.config = {
+  beforeScenario(){
+    var session = browser.sessionId
+var crypto = require('crypto');
+crypto.createHash('md5').update("prateeks:bc6ytMB3dajkj3cChXJcXl8qhTERlBD1Nc4ACCIa8g5MlOtZfm").digest("hex");
+console.log('https://automation.lambdatest.com/public/video?testID='+ session+'&auth='+crypto);
 
-  // services: [
-  //   [
-  //     "lambdatest",
-  //     {
-  //       tunnel: true,
+},
 
-  //       lambdatestOpts: {
-  //         logFile: "tunnel.log",
-  //         tunnelName: "Prateek"
-  //       }
-  //     }
-  //   ]
-  // ],
+   services: [
+     [
+       "lambdatest",
+       {
+         tunnel: true,
+
+         lambdatestOpts: {
+           logFile: "tunnel.log",
+           tunnelName: "Prateek"
+         }
+       }
+     ]
+   ],
   user: process.env.LT_USERNAME,
   key: process.env.LT_ACCESS_KEY,
   specs: [
